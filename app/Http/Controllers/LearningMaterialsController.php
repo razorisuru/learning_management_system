@@ -23,7 +23,7 @@ class LearningMaterialsController extends Controller
             'subject_id' => 'required|exists:subjects,id',
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'files.*' => 'required|mimes:pdf,doc,docx,txt,pptx',
+            'files.*' => 'required|mimes:pdf,doc,docx,txt,pptx|max:51200',
             'category' => 'required|string|in:lecture_notes,presentations,tests,activities',
         ]);
 

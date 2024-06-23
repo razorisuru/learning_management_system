@@ -52,9 +52,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-
-                @if ($errors->any())
+            @if ($errors->any())
                     <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">
                         <ul class="list-disc list-inside">
                             @foreach ($errors->all() as $error)
@@ -63,8 +61,7 @@
                         </ul>
                     </div>
                 @endif
-
-
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <form class="bg-white p-6 rounded-lg shadow-md w-full max-w" action="{{ route('upload') }}"
                     method="POST" enctype="multipart/form-data">
                     @csrf
@@ -138,7 +135,7 @@
                                     </svg>
                                     <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to
                                             upload</span> or drag and drop</p>
-                                    <p class="text-xs text-gray-500">PDF only up to 10MB</p>
+                                    <p class="text-xs text-gray-500">Only Upload PDF, DOCX, PPTX up to 50MB</p>
                                 </div>
                                 <input id="files" name="files[]" type="file" class="hidden" multiple>
                             </label>
