@@ -39,7 +39,7 @@ Route::middleware([
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'admin'])->name('admin');
 
-Route::get('/pre', [LearningMaterialsController::class, 'pre'])->middleware(['auth'])->name('pre');
+Route::get('/view', [LearningMaterialsController::class, 'view'])->middleware(['auth'])->name('view');
 
 Route::get('/UploadPDF', [LearningMaterialsController::class, 'index'])->middleware(['auth'])->name('UploadPDF');
 Route::post('/UploadPDF/upload', [LearningMaterialsController::class, 'upload'])->middleware(['auth'])->name('upload');

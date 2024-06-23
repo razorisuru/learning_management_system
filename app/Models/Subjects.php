@@ -13,13 +13,18 @@ class Subjects extends Model
         'degree_programme_id', 'name', 'description',
     ];
 
+    public function learningMaterials()
+    {
+        return $this->hasMany(LearningMaterials::class, 'subject_id', 'id');
+    }
+
     public function degreeProgramme()
     {
         return $this->belongsTo(DegreeProgramme::class);
     }
 
-    public function learningMaterials()
-    {
-        return $this->hasMany(LearningMaterials::class);
-    }
+    // public function learningMaterials()
+    // {
+    //     return $this->hasMany(LearningMaterials::class);
+    // }
 }

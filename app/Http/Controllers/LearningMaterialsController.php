@@ -51,8 +51,10 @@ class LearningMaterialsController extends Controller
         return redirect()->back()->with('status', 'Uploaded Successfully');
     }
 
-    public function pre()
+    public function view()
     {
-        return view('cards');
+        // $subjects = Subjects::all();
+        $materials = LearningMaterials::with('subjects')->get();
+        return view('UploadPDF.view', compact('materials'));
     }
 }

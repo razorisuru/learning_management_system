@@ -13,10 +13,15 @@ class LearningMaterials extends Model
         'subject_id', 'title', 'description', 'category', 'file_path', 'uploaded_by',
     ];
 
-    public function subject()
+    public function subjects()
     {
-        return $this->belongsTo(Subjects::class);
+        return $this->belongsTo(Subjects::class, 'subject_id', 'id');
     }
+
+    // public function subject()
+    // {
+    //     return $this->belongsTo(Subjects::class);
+    // }
 
     public function user()
     {
