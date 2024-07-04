@@ -41,6 +41,6 @@
 
 7. Login credentials
 
-**Email:** isurubandara318@gmail.com
+**Email:** isuru@mail.com
 
 **Password:** Isuru@123

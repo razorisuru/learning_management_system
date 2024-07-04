@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
 
         User::factory()->create([
             'name' => 'Isuru Bandara',
-            'email' => 'isurubandara318@gmail.com',
+            'email' => 'isuru@mail.com',
             'role' => 'admin',
             'email_verified_at' => now(),
             'password' => Hash::make('Isuru@123'), // Use a strong password for production
