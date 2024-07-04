@@ -3,7 +3,7 @@
 ## Installation
 1. Clone this project
     ```bash
-    
+    git clone clone razorisuru/learning_management_system
     ```
 2. Install dependencies
     ```bash
