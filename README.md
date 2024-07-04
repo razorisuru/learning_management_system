@@ -28,7 +28,10 @@
 
 5. Migrate database
     ```bash
-    php artisan migrate --seed
+    php artisan migrate
+    php artisan db:seed --class=UsersTableSeeder
+    php artisan db:seed --class=DegreeTableSeeder
+    php artisan db:seed --class=SubjectsTableSeeder
     ```
 
 6. Serve the application
@@ -38,6 +41,6 @@
 
 7. Login credentials
 
-**Email:** user@gmail.com
+**Email:** isurubandara318@gmail.com
 
-**Password:** password
+**Password:** Isuru@123
