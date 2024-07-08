@@ -11,7 +11,7 @@ class DegreeProgrammeController extends Controller
     public function getSubjects(DegreeProgramme $degree)
     {
         // Eager load subjects
-        $subjects = $degree->subjects()->get(['id', 'name']);
+        $subjects = $degree->subjects()->get(['id','subject_code', 'name']);
 
         return response()->json($subjects);
     }

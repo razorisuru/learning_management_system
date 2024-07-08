@@ -14,18 +14,23 @@ class DegreeTableSeeder extends Seeder
     public function run(): void
     {
 
-        DegreeProgramme::factory()->create([
-            'name' => 'BSC',
-            'description' => 'bsc',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        $degreeProgrammes = [
+            [
+                'name' => 'BSC',
+                'description' => 'bsc',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'B-TECH',
+                'description' => 'btech',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ];
 
-        DegreeProgramme::create([
-            'name' => 'B-tech',
-            'description' => 'btech',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        foreach ($degreeProgrammes as $programme) {
+            DegreeProgramme::create($programme);
+        }
     }
 }

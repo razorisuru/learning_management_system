@@ -13,20 +13,43 @@ class SubjectsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        Subjects::factory()->create([
-            'degree_programme_id' => 1,
-            'name' => 'OS',
-            'description' => 'osss',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        $subjects = [
+            [
+                'degree_programme_id' => 1,
+                'subject_code' => 'IT 251',
+                'name' => 'ADVANCED DEVELOPMENT',
+                'description' => 'osss',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'degree_programme_id' => 2,
+                'subject_code' => 'IT 257',
+                'name' => 'BIO INFORMATICS',
+                'description' => 'Eng',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'degree_programme_id' => 2,
+                'subject_code' => 'IT 345',
+                'name' => 'ARTIFICIAL INTELLIGENCE',
+                'description' => 'Eng',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'degree_programme_id' => 2,
+                'subject_code' => 'IT 368',
+                'name' => 'PROPOSAL PRESENTATION',
+                'description' => 'Eng',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ];
 
-        Subjects::create([
-            'degree_programme_id' => 2,
-            'name' => 'English',
-            'description' => 'Eng',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        foreach ($subjects as $subject) {
+            Subjects::create($subject);
+        }
     }
 }

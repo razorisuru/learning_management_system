@@ -10,7 +10,7 @@ class Subjects extends Model
     use HasFactory;
 
     protected $fillable = [
-        'degree_programme_id', 'name', 'description',
+        'degree_programme_id','subject_code', 'name', 'description',
     ];
 
     public function learningMaterials()

@@ -188,7 +188,7 @@
                         subjects.forEach(subject => {
                             const option = document.createElement('option');
                             option.value = subject.id;
-                            option.textContent = subject.name;
+                            option.textContent =  subject.subject_code + " - " + subject.name;
                             subjectSelect.appendChild(option);
                         });
                         subjectSelect.disabled = false; // Enable the subject select

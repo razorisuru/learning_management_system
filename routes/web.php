@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\UserManagement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LearningMaterialsController;
@@ -38,6 +39,8 @@ Route::middleware([
 // });
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'admin'])->name('admin');
+
+Route::get('/users', UserManagement::class)->name('users.index');
 
 Route::get('/view', [LearningMaterialsController::class, 'view'])->middleware(['auth'])->name('view');
 
