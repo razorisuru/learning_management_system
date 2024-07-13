@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dash', function () {
+    return view('layouts.auth');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -37,6 +41,8 @@ Route::middleware([
 // ])->group(function () {
 //     Route::get('/UploadPDF', [LearningMaterialsController::class, 'index'])->name('UploadPDF');
 // });
+
+
 
 Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'admin'])->name('admin');
 
